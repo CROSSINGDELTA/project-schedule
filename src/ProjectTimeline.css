@@ -1,0 +1,320 @@
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.add-task-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-task-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.logout-button {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background: rgba(239, 68, 68, 0.2);
+    transform: translateY(-2px);
+}
+
+.task-list {
+    background: rgba(255, 255, 255);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-list h3 {
+    margin: 0 0 1rem 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.task-items {
+    display: grid;
+    gap: 1rem;
+}
+
+.task-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.task-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1f2937;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.task-info p {
+    margin: 0.25rem 0;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.progress-slider {
+    width: 120px;
+    height: 4px;
+    border-radius: 2px;
+    background: #e5e7eb;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.progress-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+
+.progress-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button,
+.delete-button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.edit-button {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.edit-button:hover {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.delete-button {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.delete-button:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.add-task-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+.modal-content h3 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.modal-content .form-group {
+    margin-bottom: 1rem;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.modal-actions .submit-button {
+    margin-top: auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 0;
+}
+
+.modal-actions .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.modal-actions .cancel-button {
+    margin-top: auto;
+
+    background: #f3f4f6;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 0;
+}
+
+.modal-actions .cancel-button:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .header-actions {
+        justify-content: center;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .task-actions {
+        align-items: stretch;
+    }
+
+    .modal-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+}

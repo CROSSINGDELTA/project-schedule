@@ -1,0 +1,49 @@
+{
+  "name": "project-schedule",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server.js",
+    "dev:full": "concurrently \"npm run server\" \"npm run dev\"",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "frappe-gantt-react": "^0.2.2",
+    "gantt-task-react": "^0.3.9",
+    "jsonwebtoken": "^9.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.0.7",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/sqlite3": "^5.1.0",
+    "@vitejs/plugin-react": "^4.5.2",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "sass-embedded": "^1.89.2",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.34.1",
+    "vite": "^7.0.0"
+  }
+}
